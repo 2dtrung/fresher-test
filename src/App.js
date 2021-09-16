@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/App.css';
+import { Row, Col } from "antd";
+import Sidebar from './components/Sidebar.jsx';
+import Config from './components/Config.jsx';
+import TramQT from './components/TramQT.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Row>
+        <Col flex="279px">
+          <Sidebar />
+        </Col>
+        <Col flex="auto">
+          <Row style={{height: '900px'}}>
+            <Col flex="187px">
+              <Config/>
+            </Col>
+            <Col flex="auto">
+              <TramQT/>
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+    </>
   );
 }
 
