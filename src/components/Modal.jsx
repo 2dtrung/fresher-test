@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { Modal, Button, Row, Col, Tabs } from "antd";
-import { CloseOutlined } from "@ant-design/icons";
-import EditInfo from "../containers/EditInfo"
+import { Tabs } from "antd";
+import React from "react";
+import EditInfo from "../containers/EditInfo";
 const { TabPane } = Tabs;
 const Tab = ({title}) => {
   return (

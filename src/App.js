@@ -3,6 +3,7 @@ import Config from './components/Config.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import TramQT from './components/TramQT.jsx';
 import './scss/App.css';
+import {useSelector} from 'react-redux';
 
 function App() {
   return (

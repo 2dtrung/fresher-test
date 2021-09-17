@@ -121,3 +121,11 @@ code {
 .input-error {
   color: #656565;
 }
+
+.ant-collapse-header{
+  font-weight: 650;
+  font-size: 14px;
+}
+.ant-collapse-item {
+  margin-right: 0px;
+}
