@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { Modal, Button, Row, Col, Tabs, Input, Select } from "antd";
-import { CloseOutlined } from "@ant-design/icons";
+import { Col, Input, Row, Select, Tabs } from "antd";
+import React from "react";
 const { TabPane } = Tabs;
 const { Option, OptGroup } = Select;
 const EditInfo = () => {
@@ -8,33 +7,33 @@ const EditInfo = () => {
     <>
       <Row>
         <Col span={12}>
-          <Row style={{fontWeight: "600", fontSize: '16px'}}>Mã trạm <span style={{color: 'red'}}>(*)</span></Row>
+          <Row style={{fontWeight: "600", fontSize: '16px'}}>Mã trạm <span style={{color: 'red'}}> (*)</span></Row>
           <Input style={{ width: 309, height: 48 }} placeholder="HANOI_CAPITAL" />
-          <Row>Đây là mã không thể đổi</Row>
+          <Row className="input-error">Đây là mã không thể đổi</Row>
         </Col>
         <Col span={12}>
           <Row style={{fontWeight: "600", fontSize: '16px'}}>Tên trạm <span style={{color: 'red'}}> (*)</span></Row>
           <Input style={{ width: 309, height: 48 }} placeholder="Tên trạm quan trắc" />
-          <Row>Đặt tên để tìm kiếm</Row>
+          <Row className="input-error">Đặt tên để tìm kiếm</Row>
         </Col>
       </Row>
       <Row className='input-space'>
         <Col span={12}>
           <Row style={{fontWeight: "600", fontSize: '16px'}}>Kinh độ <span style={{color: 'red'}}> (*)</span></Row>
           <Input style={{ width: 309, height: 48 }} placeholder="Mã trạm của bạn" />
-          <Row>Đây là mã không thể đổi</Row>
+          <Row className="input-error">Đây là mã không thể đổi</Row>
         </Col>
         <Col span={12}>
           <Row style={{fontWeight: "600", fontSize: '16px'}}>Vĩ độ <span style={{color: 'red'}}> (*)</span></Row>
           <Input style={{ width: 309, height: 48 }} placeholder="Trên trạm quan trắc" />
-          <Row>Đặt tên để tìm kiếm</Row>
+          <Row className="input-error">Đặt tên để tìm kiếm</Row>
         </Col>
       </Row>
       <Row className='input-space'>
         <Col span={12}>
           <Row style={{fontWeight: "600", fontSize: '16px'}}>Địa chỉ <span style={{color: 'red'}}> (*)</span></Row>
           <Input style={{ width: 309, height: 48 }} placeholder="556 Nguyen Gia Cu, Gia Thuy Ward" />
-          <Row>Đây là mã không thể đổi</Row>
+          <Row className="input-error">Đây là mã không thể đổi</Row>
         </Col>
         <Col span={12}>
           <Row style={{fontWeight: "600", fontSize: '16px'}}>Loại trạm</Row>
@@ -47,7 +46,6 @@ const EditInfo = () => {
             <Option value="air">Không khí</Option>
             <Option value="water">Nước mặt</Option>
           </Select>
-          <Row>Đây là mã không thể đổi</Row>
         </Col>
       </Row>
     </>

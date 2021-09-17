@@ -1,19 +1,5 @@
-import { Menu, Row, Col, Space } from "antd";
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
-import Icon from "@ant-design/icons";
-import { ReactComponent as MessIcon } from "../assets/icons/message.svg";
-import { ReactComponent as DownIcon } from "../assets/icons/download.svg";
-import { ReactComponent as ConfigIcon } from "../assets/icons/config.svg";
-import { ReactComponent as AccountIcon } from "../assets/icons/account.svg";
-import logo from "../assets/images/logo.png";
-
-import LogoHeading from "../containers/LogoHeading";
-import MenuItem from "../containers/Menu";
-import LogoFooter from "../containers/LogoFooter";
+import { Col, Menu } from "antd";
+import { ReactComponent as ConnectIcon } from "../assets/icons/connect.svg";
 
 const { SubMenu } = Menu;
 
@@ -24,7 +10,10 @@ function TramkkData({ dataItem }) {
       <Col className="center-item" span={4}>{dataItem.id}</Col>
       <Col className="center-item" span={4}>{dataItem.name}</Col>
       <Col className="center-item" span={7}>{dataItem.address}</Col>
-      <Col className="center-item" span={4}></Col>
+      <Col className="center-item active-connect" span={4}>
+        <ConnectIcon style={{marginLeft: '10px'}}/>
+        <span style={{fontWeight: '450', color: '#008556', marginLeft: '5px'}}>Đang kết nối</span>
+      </Col>
       <Col className="center-item" span={4}>{dataItem.date}</Col>
     </>
   );
