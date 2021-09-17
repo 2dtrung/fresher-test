@@ -4071,11 +4071,6 @@ html {
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
   background-color: #EEF3FF;
 }
-.ant-menu-inline,
-.ant-menu-vertical,
-.ant-menu-vertical-left {
-  border-right: 1px solid #f0f0f0;
-}
 .ant-menu-vertical-right {
   border-left: 1px solid #f0f0f0;
 }
@@ -4201,7 +4196,7 @@ html {
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-menu-submenu-popup > .ant-menu {
-  background-color: #fff;
+  background-color: red;
 }
 .ant-menu-submenu-expand-icon,
 .ant-menu-submenu-arrow {
@@ -5608,8 +5603,8 @@ html {
 }
 .ant-btn-primary {
   color: #fff;
-  border-color: #1890ff;
-  background: #1890ff;
+  border-color: #2C5DE5;
+  background: #2C5DE5;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
@@ -9795,7 +9790,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 }
 .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
-  color: #1890ff;
+  color: #2C5DE5;
   background: #fff;
 }
 .ant-tabs-card > .ant-tabs-nav .ant-tabs-ink-bar,
@@ -9996,7 +9991,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
   color: #40a9ff;
 }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #1890ff;
+  color: #2C5DE5;
   text-shadow: 0 0 0.25px currentColor;
 }
 .ant-tabs-tab.ant-tabs-tab-disabled {
@@ -17432,7 +17427,6 @@ textarea.ant-input {
   padding: 16px 24px;
   color: rgba(0, 0, 0, 0.85);
   background: #fff;
-  border-bottom: 1px solid #f0f0f0;
   border-radius: 2px 2px 0 0;
 }
 .ant-drawer-header-no-title {
