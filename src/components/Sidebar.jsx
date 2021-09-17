@@ -20,15 +20,15 @@ const { SubMenu } = Menu;
 function Sidebar() {
   return (
     <>
-      <div className="logo-heading">
+      <div className="logo-heading-sidebar">
         <Row>
           <LogoHeading />
         </Row>
       </div>
-      <Row>
+      <Row className="menu-sidebar">
         <MenuItem/>
       </Row>
-      <Row>
+      <Row className="footer-sidebar">
         <LogoFooter/>
       </Row>
     </>

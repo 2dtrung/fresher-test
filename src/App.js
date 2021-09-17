@@ -8,12 +8,12 @@ function App() {
   return (
     <>
       <Row>
-        <Col flex="279px">
+        <Col className="sidebar" flex="280px">
           <Sidebar />
         </Col>
         <Col flex="auto">
           <Row style={{height: '900px'}}>
-            <Col flex="187px">
+            <Col flex="212px">
               <Config/>
             </Col>
             <Col flex="auto">

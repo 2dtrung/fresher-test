@@ -20,11 +20,12 @@ const { SubMenu } = Menu;
 function TramkkData({ dataItem }) {
   return (
     <>
-      <Col span={2}></Col>
-      <Col span={4}>{dataItem.id}</Col>
-      <Col span={4}>{dataItem.name}</Col>
-      <Col span={10}>{dataItem.address}</Col>
-      <Col span={4}>{dataItem.date}</Col>
+      <Col span={1}></Col>
+      <Col className="center-item" span={4}>{dataItem.id}</Col>
+      <Col className="center-item" span={4}>{dataItem.name}</Col>
+      <Col className="center-item" span={7}>{dataItem.address}</Col>
+      <Col className="center-item" span={4}></Col>
+      <Col className="center-item" span={4}>{dataItem.date}</Col>
     </>
   );
 }

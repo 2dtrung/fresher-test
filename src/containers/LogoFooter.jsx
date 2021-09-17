@@ -17,7 +17,7 @@ function LogoFooter() {
   return (
     <>
       <Col span={4}><img src={logo}></img></Col>
-      <Col span={20}><p>iLotusLand</p></Col>
+      <Col span={20}><p className="img-footer"> iLotusLand</p></Col>
     </>
   );
 }

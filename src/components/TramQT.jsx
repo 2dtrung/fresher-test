@@ -1,4 +1,4 @@
-import { Menu, Row, Col, Button, Space, Modal } from "antd";
+import { Menu, Row, Col, Button, Space, Modal, Drawer } from "antd";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -11,6 +11,7 @@ import { ReactComponent as MessIcon } from "../assets/icons/message.svg";
 import { ReactComponent as DownIcon } from "../assets/icons/download.svg";
 import { ReactComponent as ConfigIcon } from "../assets/icons/config.svg";
 import { ReactComponent as AccountIcon } from "../assets/icons/account.svg";
+import { ReactComponent as HeaderIcon } from "../assets/icons/header.svg";
 import logo from "../assets/images/logo.png";
 import { tramKK, tramNM } from "../tqt.js";
 import TramkkData from "../containers/TramkkData";
@@ -26,6 +27,10 @@ const { SubMenu } = Menu;
 
 function Sidebar() {
   const [visible, setVisible] = useState(false);
+  const onClose = () => {
+    setVisible(false);
+  };
+  const TitleModal = ({title}) =><span style={{ fontWeight: "700", fontSize: '20px'}}>{title}</span>;
   return (
     <>
       <div className="logo-heading">
@@ -46,54 +51,52 @@ function Sidebar() {
       </div>
 
       <div className="tqt-heading">
-        <Row>
-          <Col span={2}></Col>
-          <Col span={4}>Mã trạm</Col>
-          <Col span={4}>Tên trạm</Col>
-          <Col span={10}>Địa chỉ</Col>
-          <Col span={4}>Ngày hoạt động</Col>
+        <Row className='tqt-header'>
+          <Col span={1}><HeaderIcon /></Col>
+          <Col span={4} style={{ fontWeight: "600"}}>Mã trạm</Col>
+          <Col span={4} style={{ fontWeight: "600"}}>Tên trạm</Col>
+          <Col span={11} style={{ fontWeight: "600"}}>Địa chỉ</Col>
+          <Col span={4} style={{ fontWeight: "600"}}>Ngày hoạt động</Col>
         </Row>
       </div>
-      <Row>
-        <Col span={2}>
+      <Row className='item-space'>
+        <Col span={1}>
           <DownOutlined />
         </Col>
-        <Col span={22} style={{ fontWeight: "600" }}>
+        <Col span={23} style={{ fontWeight: "600" }}>
           Trạm không khí (10)
         </Col>
       </Row>
       {tramKK.map((data) => {
         return (
-          <Row key={data.id} onClick={() => setVisible(true)}>
+          <Row className='item-space' key={data.id} onClick={() => setVisible(true)}>
             <TramkkData dataItem={data} />
           </Row>
         );
       })}
-      <Row>
-        <Col span={2}>
+      <Row className='item-space'>
+        <Col span={1}>
           <DownOutlined />
         </Col>
-        <Col span={22} style={{ fontWeight: "600" }}>
-          Trạm nước mặt (10)
+        <Col span={23} style={{ fontWeight: "600" }}>
+          Trạm nước mặt (20)
         </Col>
       </Row>
       {tramNM.map((data) => {
         return (
-          <Row key={data.id}>
+          <Row className='item-space' key={data.id}>
             <TramnmData dataItem={data} />
           </Row>
         );
       })}
-      <Modal
-        title="Ha Noi Capital"
-        visible={visible}
-        onOk={() => setVisible(false)}
-        onCancel={() => setVisible(false)}
-        width={720}
-        style={{right: -320, top: 0}}
-      >
-        <ModalOverlay/>
-      </Modal>
+      <Drawer title={<TitleModal title={'Ha Noi Capital'}/>} size={720} width={720} placement="right" onClose={onClose} visible={visible}>
+        <ModalOverlay />
+        <Row className="input-space">
+            <Button type="primary" onClick={onClose}>
+              Cập nhật
+            </Button>
+        </Row>
+      </Drawer>
     </>
   );
 }
