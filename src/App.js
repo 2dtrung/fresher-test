@@ -1,8 +1,8 @@
-import './scss/App.css';
-import { Row, Col } from "antd";
-import Sidebar from './components/Sidebar.jsx';
+import { Col, Row } from "antd";
 import Config from './components/Config.jsx';
+import Sidebar from './components/Sidebar.jsx';
 import TramQT from './components/TramQT.jsx';
+import './scss/App.css';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </Col>
         <Col flex="auto">
           <Row style={{height: '900px'}}>
-            <Col flex="212px">
+            <Col flex="222px">
               <Config/>
             </Col>
             <Col flex="auto">
