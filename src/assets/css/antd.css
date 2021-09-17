@@ -2165,7 +2165,7 @@ html {
   display: none;
 }
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector {
-  height: 40px;
+  height: 48px;
 }
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector::after,
 .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item,
@@ -4502,7 +4502,7 @@ html {
 .ant-menu-sub.ant-menu-inline {
   padding: 0;
   background: #fafafa;
-  border: 0;
+  border-right: 1px solid #E4E4E4;
   border-radius: 0;
   box-shadow: none;
 }
@@ -4810,7 +4810,7 @@ html {
   padding: 0 28px 0 16px;
 }
 .ant-menu-sub.ant-menu-inline {
-  border: 0;
+  border-right: 1px solid #E4E4E4;
 }
 .ant-menu-rtl.ant-menu-sub.ant-menu-inline .ant-menu-item-group-title {
   padding-right: 32px;
