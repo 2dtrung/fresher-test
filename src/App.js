@@ -2,7 +2,7 @@ import { Col, Row, Empty } from "antd";
 import Config from "./components/Config.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import TramQT from "./components/TramQT.jsx";
-import "./scss/App.css";
+import "./assets/css/App.css";
 import { useSelector } from "react-redux";
 
 function App() {

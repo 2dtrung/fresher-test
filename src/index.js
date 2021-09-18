@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import "./assets/css/antd.css";
-import './scss/index.css';
+import './assets/css/index.css';
 import { Provider } from 'react-redux';
 import store from './store';
 
