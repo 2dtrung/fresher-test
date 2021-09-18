@@ -32,8 +32,8 @@
 -   [Getting Started](#getting-started)
 -   [How to Use](#how-to-use)
 -   [Technologies Used](#technologies-used)
--   [Illustrations](#illustrations)
 -   [For the Future](#for-the-future)
+-   [Reference](#reference)
 
 ## Sections
 
@@ -94,7 +94,7 @@ $ yarn start
 
 -   [Design in Figma](https://www.figma.com/file/AsBGpHVHYSas6w7W5hfm9z/Fresher_Test?node-id=0%3A1)
 
--   Mentor - 👤 **Phan Thanh Tung - VietAn Group Technology Director** [Mail](tung.phan@vietan-software.com)
+-   **Mentor - Mrs.Phan Thanh Tung - VietAn Group Technology Director** [Mail] - tung.phan@vietan-software.com
 
 ## Author
 
