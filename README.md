@@ -6,21 +6,21 @@
 ## First interface after access website
 <p align="center">
   <kbd>
-    <img src="https://github.com/2dtrung/personal-portfolio/blob/master/picture1.PNG"></img>
+    <img src="https://github.com/2dtrung/fresher-test/blob/master/picture1.PNG"></img>
   </kbd>
 </p>
 
 ## After click config item in menu
 <p align="center">
   <kbd>
-    <img src="https://github.com/2dtrung/personal-portfolio/blob/master/picture2.PNG"></img>
+    <img src="https://github.com/2dtrung/fresher-test/blob/master/picture2.PNG"></img>
   </kbd>
 </p>
 
 ## After click each item data
 <p align="center">
   <kbd>
-    <img src="https://github.com/2dtrung/personal-portfolio/blob/master/picture3.PNG"></img>
+    <img src="https://github.com/2dtrung/fresher-test/blob/master/picture3.PNG"></img>
   </kbd>
 </p>
 
