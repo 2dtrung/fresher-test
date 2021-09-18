@@ -1,17 +1,15 @@
-import { DownOutlined, PlusOutlined } from "@ant-design/icons";
-import { Button, Col, Drawer, Menu, Row, Collapse } from "antd";
+import { PlusOutlined } from "@ant-design/icons";
+import { Button, Col, Collapse, Drawer, Row } from "antd";
 import React, { useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { getDangNangCity, getHanoiCapital, getHCMCity } from '../actions/setVisibleState';
 import { ReactComponent as HeaderIcon } from "../assets/icons/header.svg";
 import TramkkData from "../containers/TramkkData";
 import TramnmData from "../containers/TramnmData";
 import { tramKK, tramNM } from "../tqt.js";
 import ModalOverlay from "./Modal";
-import {useDispatch, useSelector} from 'react-redux';
-import {getHanoiCapital, getDangNangCity, getHCMCity} from '../actions/setVisibleState';
 
 const { Panel } = Collapse;
-
-const { SubMenu } = Menu;
 
 function ContainerTramQT() {
   const [visible, setVisible] = useState(false);
@@ -22,12 +20,6 @@ function ContainerTramQT() {
   const dispatch = useDispatch();
   const TitleModal = ({ title }) => (
     <span style={{ fontWeight: "700", fontSize: "20px" }}>{title}</span>
-  );
-  const PanelHeader1 = () => (
-      <p>Trạm không khí (10)</p>
-  );
-  const PanelHeader2 = () => (
-    <p>Trạm nước mặt (20)</p>
   );
   return (
     <>
@@ -75,9 +67,9 @@ function ContainerTramQT() {
                 className="item-space"
                 key={data.id}
                 onClick={() => {
-                  if(data.id == 'HN_Air_KHI') dispatch(getHanoiCapital);
-                  else if (data.id == 'DN_Air_KHI') dispatch(getDangNangCity);
-                  else if (data.id == 'HCM_Air_KHI') dispatch(getHCMCity);
+                  if(data.id === 'HN_Air_KHI') dispatch(getHanoiCapital);
+                  else if (data.id === 'DN_Air_KHI') dispatch(getDangNangCity);
+                  else if (data.id === 'HCM_Air_KHI') dispatch(getHCMCity);
                   data.connect = true;
                   setVisible(true);
                 }}
@@ -92,11 +84,10 @@ function ContainerTramQT() {
             return (
               <Row  
               className="item-space" 
-              key={data.id}
               onClick={() => {
-                if(data.id == 'HN_Air_KHI') dispatch(getHanoiCapital);
-                else if (data.id == 'DN_Air_KHI') dispatch(getDangNangCity);
-                else if (data.id == 'HCM_Air_KHI') dispatch(getHCMCity);
+                if(data.id === 'HN_Air_KHI') dispatch(getHanoiCapital);
+                else if (data.id === 'DN_Air_KHI') dispatch(getDangNangCity);
+                else if (data.id === 'HCM_Air_KHI') dispatch(getHCMCity);
                 data.connect = true;
                 setVisible(true);
               }}

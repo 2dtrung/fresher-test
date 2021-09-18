@@ -1,7 +1,6 @@
 import { Menu } from "antd";
 import { useDispatch } from "react-redux";
 import {setTrueTQT, setFalseTQT} from "../actions/setVisibleState"
-const { SubMenu } = Menu;
 
 function ContainerConfig() {
   const dispatch = useDispatch();

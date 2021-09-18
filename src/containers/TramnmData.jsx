@@ -1,8 +1,5 @@
-import { Col, Menu } from "antd";
+import { Col } from "antd";
 import { ReactComponent as ConnectIcon } from "../assets/icons/connect.svg";
-
-
-const { SubMenu } = Menu;
 
 function TramnmData({ dataItem }) {
   const ConnectContainer = () => {

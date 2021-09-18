@@ -1,9 +1,8 @@
-import { Col, Input, Row, Select, Tabs } from "antd";
+import { Col, Input, Row, Select } from "antd";
 import React from "react";
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
-const { TabPane } = Tabs;
-const { Option, OptGroup } = Select;
+const { Option } = Select;
 
 const EditInfo = () => {
   const data = useSelector(state => state.getData);

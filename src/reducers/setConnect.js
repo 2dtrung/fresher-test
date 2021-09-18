@@ -3,16 +3,6 @@ const hanoiConnect = {
     danang: false,
     hcm: false,
 }
-const dnConnect = {
-    hanoi: false,
-    danang: true,
-    hcm: false,
-}
-const hcmConnect = {
-    hanoi: false,
-    danang: false,
-    hcm: true,
-}
 const setConnect = (state = hanoiConnect, action) => {
     switch (action.type) {
         case "SET_HN_CONNECT":
