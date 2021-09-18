@@ -1,40 +1,33 @@
 import { Col, Input, Row, Select, Tabs } from "antd";
 import React from "react";
+import {useSelector} from "react-redux";
+
 const { TabPane } = Tabs;
 const { Option, OptGroup } = Select;
+
 const EditInfo = () => {
+  const data = useSelector(state => state.getData);
+  const InputContent = ({id, placeholder, value, warning}) => {
+    return (
+      <Col span={12}>
+        <Row style={{fontWeight: "600", fontSize: '16px'}}>{id}<span style={{color: 'red'}}> (*)</span></Row>
+        <Input className="input-value" style={{ width: 309, height: 48 }} value={value} placeholder={placeholder} />
+        <Row className="input-error">{warning}</Row>
+      </Col>
+    );
+  }
   return (
     <>
       <Row>
-        <Col span={12}>
-          <Row style={{fontWeight: "600", fontSize: '16px'}}>Mã trạm <span style={{color: 'red'}}> (*)</span></Row>
-          <Input style={{ width: 309, height: 48 }} placeholder="HANOI_CAPITAL" />
-          <Row className="input-error">Đây là mã không thể đổi</Row>
-        </Col>
-        <Col span={12}>
-          <Row style={{fontWeight: "600", fontSize: '16px'}}>Tên trạm <span style={{color: 'red'}}> (*)</span></Row>
-          <Input style={{ width: 309, height: 48 }} placeholder="Tên trạm quan trắc" />
-          <Row className="input-error">Đặt tên để tìm kiếm</Row>
-        </Col>
+        <InputContent id={'Mã trạm '} placeholder={'HANOI_CAPITAL'} value={data.id} warning={'Đây là mã không thể đổi'}/>
+        <InputContent id={'Tên trạm '} placeholder={'Tên trạm quan trắc'} warning={'Đặt tên để tìm kiếm'}/>
       </Row>
       <Row className='input-space'>
-        <Col span={12}>
-          <Row style={{fontWeight: "600", fontSize: '16px'}}>Kinh độ <span style={{color: 'red'}}> (*)</span></Row>
-          <Input style={{ width: 309, height: 48 }} placeholder="Mã trạm của bạn" />
-          <Row className="input-error">Đây là mã không thể đổi</Row>
-        </Col>
-        <Col span={12}>
-          <Row style={{fontWeight: "600", fontSize: '16px'}}>Vĩ độ <span style={{color: 'red'}}> (*)</span></Row>
-          <Input style={{ width: 309, height: 48 }} placeholder="Trên trạm quan trắc" />
-          <Row className="input-error">Đặt tên để tìm kiếm</Row>
-        </Col>
+        <InputContent id={'Kinh độ '} placeholder={'Mã trạm của bạn'} warning={'Đây là mã không thể đổi'}/>
+        <InputContent id={'Vĩ độ '} placeholder={'Trên trạm quan trắc'} warning={'Đặt tên để tìm kiếm'}/>
       </Row>
       <Row className='input-space'>
-        <Col span={12}>
-          <Row style={{fontWeight: "600", fontSize: '16px'}}>Địa chỉ <span style={{color: 'red'}}> (*)</span></Row>
-          <Input style={{ width: 309, height: 48 }} placeholder="556 Nguyen Gia Cu, Gia Thuy Ward" />
-          <Row className="input-error">Đây là mã không thể đổi</Row>
-        </Col>
+        <InputContent id={'Địa chỉ '} placeholder={'556 Nguyen Gia Cu, Gia Thuy Ward'} value={data.address} warning={'Đây là mã không thể đổi'}/>
         <Col span={12}>
           <Row style={{fontWeight: "600", fontSize: '16px'}}>Loại trạm</Row>
           <Select

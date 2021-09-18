@@ -24,7 +24,6 @@ code {
   height: 757px;
 }
 .menu-item ul {
-  margin-top: 20px;
   margin-left: 16px;
 }
 .submenu-item li {
@@ -71,8 +70,8 @@ code {
 }
 .item-space {
   cursor: pointer;
-  margin-top: 16px;
-  margin-bottom: 32px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   height: 44px;
 }
 .item-space-header {
@@ -120,6 +119,10 @@ code {
 
 .input-error {
   color: #656565;
+}
+.input-value[value] {
+  font-weight: 450;
+  font-size: 16px;
 }
 
 .ant-collapse-header{

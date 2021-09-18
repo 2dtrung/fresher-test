@@ -18,19 +18,19 @@ const ModalOverlay = () => {
             <EditInfo/>
           </TabPane>
           <TabPane tab={<Tab title={'Thông số'}/>} key="2">
-            Content of Thông số
+            Nội dung của Thông số
           </TabPane>
           <TabPane tab={<Tab title={'FTP'}/>} key="3">
-            Content of FTP
+            Nội dung của FTP
           </TabPane>
           <TabPane tab={<Tab title={'Thông báo'}/>} key="4">
-            Content of Thông báo
+            Nội dung của Thông báo
           </TabPane>
           <TabPane tab={<Tab title={'Lấy mẫu'}/>} key="5">
-            Content of Lấy mẫu
+            Nội dung của Lấy mẫu
           </TabPane>
           <TabPane tab={<Tab title={'Camera'}/>} key="6">
-            Content of Camera
+            Nội dung của Camera
           </TabPane>
         </Tabs>
     </>

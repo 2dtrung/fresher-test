@@ -6,6 +6,8 @@ import TramkkData from "../containers/TramkkData";
 import TramnmData from "../containers/TramnmData";
 import { tramKK, tramNM } from "../tqt.js";
 import ModalOverlay from "./Modal";
+import {useDispatch, useSelector} from 'react-redux';
+import {getHanoiCapital, getDangNangCity, getHCMCity} from '../actions/setVisibleState';
 
 const { Panel } = Collapse;
 
@@ -16,6 +18,8 @@ function ContainerTramQT() {
   const onClose = () => {
     setVisible(false);
   };
+  const data = useSelector(state => state.getData);
+  const dispatch = useDispatch();
   const TitleModal = ({ title }) => (
     <span style={{ fontWeight: "700", fontSize: "20px" }}>{title}</span>
   );
@@ -63,14 +67,20 @@ function ContainerTramQT() {
           </Col>
         </Row>
       </div>
-      <Collapse defaultActiveKey={["1"]} ghost>
+      <Collapse defaultActiveKey={["1","2"]} ghost>
         <Panel header="Trạm không khí (10)" key="1" style={{ width: "100%" }}>
           {tramKK.map((data) => {
             return (
               <Row
                 className="item-space"
                 key={data.id}
-                onClick={() => setVisible(true)}
+                onClick={() => {
+                  if(data.id == 'HN_Air_KHI') dispatch(getHanoiCapital);
+                  else if (data.id == 'DN_Air_KHI') dispatch(getDangNangCity);
+                  else if (data.id == 'HCM_Air_KHI') dispatch(getHCMCity);
+                  data.connect = true;
+                  setVisible(true);
+                }}
               >
                 <TramkkData dataItem={data} />
               </Row>
@@ -80,7 +90,18 @@ function ContainerTramQT() {
         <Panel header="Trạm nước mặt (20)" key="2">
           {tramNM.map((data) => {
             return (
-              <Row className="item-space" key={data.id}>
+              <Row  
+              className="item-space" 
+              key={data.id}
+              onClick={() => {
+                if(data.id == 'HN_Air_KHI') dispatch(getHanoiCapital);
+                else if (data.id == 'DN_Air_KHI') dispatch(getDangNangCity);
+                else if (data.id == 'HCM_Air_KHI') dispatch(getHCMCity);
+                data.connect = true;
+                setVisible(true);
+              }}
+              key={data.id
+              }>
                 <TramnmData dataItem={data} />
               </Row>
             );
@@ -88,7 +109,7 @@ function ContainerTramQT() {
         </Panel>
       </Collapse>
       <Drawer
-        title={<TitleModal title={"Ha Noi Capital"} />}
+        title={<TitleModal title={data.name} />}
         size={720}
         width={720}
         placement="right"
